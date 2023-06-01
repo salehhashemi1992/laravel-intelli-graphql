@@ -1,0 +1,61 @@
+{
+    "name": "salehhashemi/laravel-intelli-graphql",
+    "description": "An AI-driven Laravel package for generating GraphQL schemas, queries, and mutations based on database tables.",
+    "keywords": [
+        "salehhashemi",
+        "laravel",
+        "intelli-graphql",
+        "ai",
+        "database",
+        "graphql",
+        "schemas",
+        "queries",
+        "mutations"
+    ],
+    "homepage": "https://github.com/salehhashemi1992/laravel-intelli-graphql",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Saleh Hashemi",
+            "email": "salpars2004@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.8",
+        "orchestra/testbench": "^8.0",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Salehhashemi\\LaravelIntelliGraphql\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Salehhashemi\\LaravelIntelliGraphql\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Salehhashemi\\LaravelIntelliGraphql\\LaravelIntelliGraphqlServiceProvider"
+            ]
+        }
+    }
+}

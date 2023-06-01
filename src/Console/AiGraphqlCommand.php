@@ -96,6 +96,7 @@ class AiGraphqlCommand extends Command
     private function createAiPrompt(string $table, array $schema): string
     {
         $prompt = "Generate a GraphQL schema, queries, and mutations for a table named '{$table}'.";
+        $prompt .= "\nProvide only the final code without any explanations or additional context.";
         $prompt .= "\nThe current schema of the table is as follows:\n".implode(', ', $schema);
 
         return $prompt;
